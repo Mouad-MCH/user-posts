@@ -39,12 +39,14 @@
     }
   }
   
-  .user {
+  .user, .post {
     @apply p-2 w-full bg-white rounded-lg shadow-sm cursor-pointer hover:shadow-none transition-all duration-300;
   }
+
+  .user {
+    @apply hover:bg-[#0AC4E0] hover:text-white;
+  }
 }
-
-
 
 
 @utility flex-center {
