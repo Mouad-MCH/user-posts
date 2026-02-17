@@ -1,2 +1,52 @@
 @import 'tailwindcss';
 
+
+@layer base {
+  html, body, #root {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-[#0992C2] text-gray-800 p-10;
+  }
+
+  h1 {
+    @apply text-xl font-bold;
+  }
+
+  p {
+    @apply text-[#547792] text-sm;
+  }
+
+}
+
+
+@layer components {
+
+  .container {
+    @apply w-full h-full grid grid-cols-[300px_1fr] gap-5;
+  }
+
+  .users_content, 
+  .posts_content {
+    @apply bg-[#F6E7BC] rounded-lg p-5 overflow-y-auto;
+    scrollbar-width: none;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    & ul {
+      @apply flex flex-col gap-5 ;
+    }
+  }
+  
+  .user {
+    @apply p-2 w-full bg-white rounded-lg shadow-sm cursor-pointer hover:shadow-none transition-all duration-300;
+  }
+}
+
+
+
+
+@utility flex-center {
+  @apply flex items-center justify-center; 
+}
