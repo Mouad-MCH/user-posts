@@ -2,9 +2,9 @@
 
 const Users = (props) => {
   return (
-    <div className="user">
-      <h1>User{props.num + 1}</h1>
-      <p>exemple@gmail.com</p>
+    <div onClick={props.onClick}  className="user">
+      <h1>{props.user.name}</h1>
+      <p>{props.user.email}</p>
     </div>
   )
 }
